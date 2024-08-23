@@ -41,7 +41,7 @@ url = "https://wall-street-journal.p.rapidapi.com/api/v1/searchArticleByKeyword"
 querystring = {"keyword":"nvidia"}
 
 headers = {
-	"x-rapidapi-key": "2e62bb14d7msh0ac29fb7a5bc138p1ca03fjsn2f852c6c7e30",
+	"x-rapidapi-key": "your_own_API_KEY",
 	"x-rapidapi-host": "wall-street-journal.p.rapidapi.com"
 }
 
