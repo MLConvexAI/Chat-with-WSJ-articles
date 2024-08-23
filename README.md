@@ -70,6 +70,14 @@ print(response.json())
 
 ## Create a graph database
 
+We first setup up the virtual environment where we run the Python scripts
+
+```console
+python -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+```
+
 We populate the database using some articles from the WSJ. We use three keywords: "nvidia", "meta" and "tesla" and take all the articles returned in the query. We use a simple script that first asks for a search term (script create_wsj_graph_db.py) . It automatically retrieves all WSJ documents that contain the keyword. It also creates some relationships between chunks and nodes. Below is an example of a "nvidia" search
 
 ![Chat-with_WSJ-articles](images/console1.jpg)
