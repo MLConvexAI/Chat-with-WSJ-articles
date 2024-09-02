@@ -258,6 +258,16 @@ if masternode !="":
 
 client = OpenAI()
 
+# create vector index
+graph.query("""
+         CREATE VECTOR INDEX 'wsj_articles' IF NOT EXISTS
+          FOR (c:Chunk) ON (c.textEmbedding) 
+          OPTIONS { indexConfig: {
+            `vector.dimensions`: 1536,
+            `vector.similarity_function`: 'cosine'    
+         }}
+""")
+
 # embeddings for text
 def get_embedding(text, model="text-embedding-3-small"):
    text = text.replace("\n", " ")
